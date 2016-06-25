@@ -1,13 +1,13 @@
 # euro-cli
 
-> CLI commands to show latest update from Euro 2016
+> CLI commands to show latest update from UEFA Euro 2016. All data provided by [Football Data API](http://api.football-data.org)
 
 
 <img src="https://raw.githubusercontent.com/yuripertamax/euro-cli/master/illustration.jpg" width="360">
 
 ## Why?
 
-Are you too lazy to type `your-country-name euro 2016` on [google.com](http://google.com)? This simple app will give you information about your favorite team(s) or country(ies) just with CLI command. All data provided by [Football Data API](api.football-data.org)
+Are you too lazy to type `your-country-name euro 2016` on [google.com](http://google.com)? This simple app will give you information about your favorite team(s) or country(ies) just with CLI command. All data provided by [Football Data API](http://api.football-data.org)
 
 ## Features
 
