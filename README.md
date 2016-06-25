@@ -3,8 +3,12 @@
 > CLI commands to show latest update from Euro 2016
 
 
+
 <img src="https://raw.githubusercontent.com/yuripertamax/euro-cli/master/illustration.jpg" width="360">
 
+## Why?
+
+Are you too lazy to type `your-country-name euro 2016` on [google.com](http://google.com)? This simple app will give you information about your favorite team(s) or country(ies) just with CLI command
 
 ## Features
 

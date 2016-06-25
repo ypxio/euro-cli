@@ -1,15 +1,10 @@
 const meow = require('meow');
 var jsonQuery = require('json-query');
 var Table = require('cli-table');
+var clc = require('cli-color');
+
 var FootballDataAPI = require('./api.js');
 var fdapi = FootballDataAPI('dcc0cae29b01472eb6af5d399513b835');
-var clc = require('cli-color');
-// const imageToAscii = require("image-to-ascii");
-
-// imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
-//     console.log(err || converted);
-// });
-
 
 const cli = meow(`
   Usage
@@ -29,7 +24,6 @@ const cli = meow(`
       (2-1) England vs Wales
       (0-0) Slovakia vs England
       (null-null) England vs Iceland
-
 
       [GROUP B] Classement
       ┌────────────────────┬─────┬─────┬─────┬─────┬──────────┐
@@ -103,7 +97,6 @@ fdapi.getCountryLists(sessionID).then(function(res) {
           );
         }
       });
-      // console.log(table);
       console.log(table.toString());
 
     }).catch(function(err){
@@ -130,14 +123,6 @@ fdapi.getCountryLists(sessionID).then(function(res) {
         var goals = '---';
         console.log("(" + goals + ") " + homeTeamName + " vs " + awayTeamName + clc.red(" ( Will be played on " + val.date + ")"));
       }
-      // if(val.status == 'FINISHED') {
-      // } else {
-      // } 
-      // var output = "(" + goals + ") " + homeTeamName + " vs " + awayTeamName;
-      // if(val.status == 'TIMED') {
-      //   output += " ( Will be played on " + val.date + ")";
-      // }
-      // console.log(output);
     });
   }).catch(function(err) {
     console.log(err);
