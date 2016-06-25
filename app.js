@@ -3,11 +3,13 @@ var jsonQuery = require('json-query');
 var Table = require('cli-table');
 var FootballDataAPI = require('./api.js');
 var fdapi = FootballDataAPI('dcc0cae29b01472eb6af5d399513b835');
+var clc = require('cli-color');
 // const imageToAscii = require("image-to-ascii");
 
 // imageToAscii("https://octodex.github.com/images/octofez.png", (err, converted) => {
 //     console.log(err || converted);
 // });
+
 
 const cli = meow(`
   Usage
@@ -84,9 +86,22 @@ fdapi.getCountryLists(sessionID).then(function(res) {
       });
 
       tableClassement.forEach(function(val) {
-        table.push(
-          [ val.team, val.playedGames, val.goals, val.goalsAgainst, val.goalDifference, val.points]
-      );
+        if(val.team == input) {
+          table.push(
+            [ 
+              clc.green(val.team), 
+              clc.green(val.playedGames), 
+              clc.green(val.goals), 
+              clc.green(val.goalsAgainst), 
+              clc.green(val.goalDifference), 
+              clc.green(val.points)
+            ]
+          );
+        } else {
+          table.push(
+            [ val.team, val.playedGames, val.goals, val.goalsAgainst, val.goalDifference, val.points]
+          );
+        }
       });
       // console.log(table);
       console.log(table.toString());
@@ -97,6 +112,8 @@ fdapi.getCountryLists(sessionID).then(function(res) {
 
     var fixtures = res.fixtures;
     console.log("\n");
+    console.log("UEFA EURO 2016 CLI v1.0");
+    console.log("\n");
     console.log( input + " Match Results");
     console.log("-----------------------------");
     Object.keys(fixtures).forEach(function(key) {
@@ -105,7 +122,22 @@ fdapi.getCountryLists(sessionID).then(function(res) {
       var awayTeamName = val.awayTeamName;
       var homeGoals = val.result.goalsHomeTeam;
       var awayGoals = val.result.goalsAwayTeam;
-      console.log( "(" + homeGoals + "-" + awayGoals + ") " + homeTeamName + " vs " + awayTeamName);
+
+      if(val.status == 'FINISHED') {
+        var goals = homeGoals + "-" + awayGoals;
+        console.log(clc.green("(" + goals + ") " + homeTeamName + " vs " + awayTeamName))
+      } else {
+        var goals = '---';
+        console.log("(" + goals + ") " + homeTeamName + " vs " + awayTeamName + clc.red(" ( Will be played on " + val.date + ")"));
+      }
+      // if(val.status == 'FINISHED') {
+      // } else {
+      // } 
+      // var output = "(" + goals + ") " + homeTeamName + " vs " + awayTeamName;
+      // if(val.status == 'TIMED') {
+      //   output += " ( Will be played on " + val.date + ")";
+      // }
+      // console.log(output);
     });
   }).catch(function(err) {
     console.log(err);
