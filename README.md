@@ -11,7 +11,6 @@ Are you too lazy to type `your-country-name euro 2016` on [google.com](http://go
 
 ## Features
 
-- Show country stats
 - Show current country group with classement table and match results table
 
 
@@ -51,6 +50,11 @@ Iceland Match Results
 │ Austria            │ 3   │ 1   │ 4   │ -3  │ 1        │
 └────────────────────┴─────┴─────┴─────┴─────┴──────────┘
 ```
+
+## Coming Soon
+
+- Show country stats 
+- Show last match from all group and spesific group 
 
 
 ## License
