@@ -83,21 +83,6 @@ fdapi.getCountryLists(sessionID).then(function(res) {
         , colWidths: [20, 5, 5, 5, 5, 10]
       });
 
-      // var returnobject = Object.keys(tableClassement).forEach(function(key) {
-        // var val = tableClassement[key];
-        // console.log(val);
-        // this.table.push(
-        //     [ val.team, val.playedGames, val.goal, val.goalAgainst, val.goalDifference, val.points]
-        // );
-      // });
-      // function showObject(obj) {
-      //   var result = [];
-       
-      //   obj.forEach(function(val) {
-      //     result.push(val.team, val.points);
-      //   });
-      //   return result;
-      // }
       tableClassement.forEach(function(val) {
         table.push(
           [ val.team, val.playedGames, val.goals, val.goalsAgainst, val.goalDifference, val.points]
