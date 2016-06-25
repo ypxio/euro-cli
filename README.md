@@ -2,7 +2,7 @@
 
 > CLI commands to show latest update from Euro 2016
 
-![euro2016](https://s1.kkday.com/images/product/7556/20160426074006_bnWjp.jpg)
+![euro2016](https://raw.githubusercontent.com/yuripertamax/euro-cli/master/illustration.jpg)
 
 
 ## Features
