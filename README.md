@@ -2,7 +2,8 @@
 
 > CLI commands to show latest update from Euro 2016
 
-![euro2016](https://raw.githubusercontent.com/yuripertamax/euro-cli/master/illustration.jpg)
+
+<img src="https://raw.githubusercontent.com/yuripertamax/euro-cli/master/illustration.jpg" width="360">
 
 
 ## Features
