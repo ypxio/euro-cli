@@ -9,10 +9,10 @@ const sessionID = 424;
 
 const cli = meow(`
   Usage
-    $ node index.js <input>
+    $ ./index.js <input>
 
     Options
-      -r, --rainbow  Include a rainbow
+      -h, --help  Show help
 
     Examples
       $ node index.js England
