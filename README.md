@@ -9,6 +9,10 @@
 
 Are you too lazy to type `your-country-name euro 2016` on [google.com](http://google.com)? This simple app will give you information about your favorite team(s) or country(ies) just with CLI command. All data provided by [Football Data API](http://api.football-data.org)
 
+## Demo
+
+![](https://s3.amazonaws.com/f.cl.ly/items/0E132u2m0Y2T3R3Y340N/Screen%20Recording%202016-07-04%20at%2001.08%20AM.gif)
+
 ## Features
 
 - Show current country group with classement table and match results table
